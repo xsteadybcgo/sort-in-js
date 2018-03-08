@@ -1,14 +1,14 @@
 function selectionSort(array) {
-    var length = array.length, //{1}
+    var length = array.length, 
         indexMin;
-    for (var i = 0; i < length - 1; i++) { //{2}
-        indexMin = i; //{3}
-        for (var j = i; j < length; j++) { //{4}
-            if (array[indexMin] > array[j]) { //{5}
-                indexMin = j; //{6}
+    for (var i = 0; i < length - 1; i++) { 
+        indexMin = i; // define the index of the minimum element
+        for (var j = i; j < length; j++) {
+            if (array[indexMin] > array[j]) { 
+                indexMin = j; 
             }
         }
-        if (i !== indexMin) { //{7}
+        if (i !== indexMin) { 
             [array[i], array[indexMin]] = [array[indexMin], array[i]];
         }
     }
